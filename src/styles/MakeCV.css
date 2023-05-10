@@ -1,0 +1,43 @@
+.main-container {
+  flex: 50;
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: scroll;
+  height: 100vh;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cacaca;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #acacac;
+}
+
+.general-info-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.educational-experience-container {
+  display: flex;
+  flex-direction: column;
+}
+.practical-experience-container {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: none;
+  background-color: rgb(216, 216, 216);
+  padding: 10px 20px;
+}

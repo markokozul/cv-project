@@ -14,6 +14,7 @@ export function EducationalExperience({ onEdExpValues, edExpValues }) {
       ))}
 
       <button
+        className="add-button"
         onClick={() =>
           onEdExpValues((oldArr) => [
             ...oldArr,

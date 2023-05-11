@@ -4,12 +4,7 @@ import { GeneralInfoPreview } from "./PreviewCV components/GeneralInfoPreview";
 import { PracticalExperiencePreview } from "./PreviewCV components/PracticalExperiencePreview";
 import "../styles/PreviewCV.css";
 
-export function PreviewCV({
-  generalInfoValues,
-  edExpValues,
-  practExpValues,
-  state,
-}) {
+export function PreviewCV({ generalInfoValues, edExpValues, practExpValues }) {
   return (
     <div className="main-previewcv-container">
       <div className="previewcv-content">

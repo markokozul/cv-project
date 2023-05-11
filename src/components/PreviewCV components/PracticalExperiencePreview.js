@@ -1,17 +1,36 @@
 export function PracticalExperiencePreview({ practExpValues }) {
   let content =
-    practExpValues.length >= 1 ? <h2>Practical Experience</h2> : <></>;
+    practExpValues.length >= 1 ? (
+      <p className="titles">Practical Experience</p>
+    ) : (
+      <></>
+    );
 
   return (
-    <div className="educational-experience-container">
+    <div className="practical-experience-preview-container">
       {content}
-      {practExpValues.map((item) => (
-        <div key={item.id}>
-          <p>{item.school}</p>
-          <p>{item.study}</p>
-          <p>{item.date}</p>
-        </div>
-      ))}
+      <div className="items">
+        {practExpValues.map((item) => (
+          <div className="item" key={item.id}>
+            <div>
+              <p>
+                <strong>{item.job}</strong>
+              </p>
+            </div>
+
+            <div>
+              {" "}
+              <p>{item.company}</p>
+            </div>
+            <div>
+              <p>{item.jobDesc}</p>
+            </div>
+            <div>
+              <p>{item.date}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

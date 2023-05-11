@@ -21,13 +21,17 @@ export function PractExpInputs({ index, onPractExpValues, practExpValues }) {
 
   return (
     <>
-      <label>School name:</label>
-      <input name="school" onInput={handleInput}></input>
-      <label>Title of study:</label>
-      <input name="study" onInput={handleInput}></input>
-      <label>Date of study:</label>
-      <input name="date" onInput={handleInput}></input>
-      <button onClick={removeSection}>Remove</button>
+      <label>Position Title:</label>
+      <input name="job" onInput={handleInput}></input>
+      <label>Company name:</label>
+      <input name="company" onInput={handleInput}></input>
+      <label>Short job description: </label>
+      <input name="jobDesc" onInput={handleInput}></input>
+      <label>Date(from-until when): </label>
+      <input name="date" type="date" onInput={handleInput}></input>
+      <button className="remove-btn" onClick={removeSection}>
+        Remove
+      </button>
     </>
   );
 }

@@ -14,6 +14,7 @@ export function PracticalExperience({ onPractExpValues, practExpValues }) {
       ))}
 
       <button
+        className="add-button"
         onClick={() =>
           onPractExpValues((oldArr) => [
             ...oldArr,

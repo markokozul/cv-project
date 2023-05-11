@@ -22,13 +22,15 @@ export function EdExpInputs({ index, onEdExpValues }) {
 
   return (
     <>
-      <label>School name:</label>
-      <input name="school" onInput={handleInput}></input>
       <label>Title of study:</label>
       <input name="study" onInput={handleInput}></input>
+      <label>School name:</label>
+      <input name="school" onInput={handleInput}></input>
       <label>Date of study:</label>
-      <input name="date" onInput={handleInput}></input>
-      <button onClick={removeSection}>Remove</button>
+      <input name="date" type="date" onInput={handleInput}></input>
+      <button className="remove-btn" onClick={removeSection}>
+        Remove
+      </button>
     </>
   );
 }

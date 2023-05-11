@@ -3,3 +3,17 @@
   flex-direction: row;
   height: 100vh;
 }
+
+@media screen and (max-width: 1050px) {
+  .content {
+    padding: 0px 50px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 420px) {
+  .content {
+    padding: 0px;
+  }
+}

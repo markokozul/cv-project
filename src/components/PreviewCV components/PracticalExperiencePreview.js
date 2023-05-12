@@ -1,4 +1,9 @@
-export function PracticalExperiencePreview({ practExpValues }) {
+import { useContext } from "react";
+import { Context } from "../../App";
+
+export function PracticalExperiencePreview() {
+  const { practExpValues } = useContext(Context);
+
   let content =
     practExpValues.length >= 1 ? (
       <p className="titles">Practical Experience</p>

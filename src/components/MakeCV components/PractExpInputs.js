@@ -1,7 +1,10 @@
-export function PractExpInputs({ index, onPractExpValues, practExpValues }) {
-  console.log(index);
+import { useContext } from "react";
+import { Context } from "../../App";
+export function PractExpInputs({ index }) {
+  const { setPractExpValues } = useContext(Context);
+
   const handleInput = (e) => {
-    onPractExpValues((practExpValues) => {
+    setPractExpValues((practExpValues) => {
       return practExpValues.map((item) => {
         console.log(item.id, index);
         if (item.id === index) {
@@ -14,7 +17,7 @@ export function PractExpInputs({ index, onPractExpValues, practExpValues }) {
   };
 
   const removeSection = () => {
-    onPractExpValues((practExpValues) =>
+    setPractExpValues((practExpValues) =>
       practExpValues.filter((item) => item.id !== index)
     );
   };
@@ -30,7 +33,7 @@ export function PractExpInputs({ index, onPractExpValues, practExpValues }) {
       <label>Date(from-until when): </label>
       <input name="date" type="date" onInput={handleInput}></input>
       <button className="remove-btn" onClick={removeSection}>
-        Remove
+        Remove Section
       </button>
     </>
   );

@@ -1,4 +1,8 @@
-export function EducationalExperiencePreview({ edExpValues }) {
+import { useContext } from "react";
+import { Context } from "../../App";
+
+export function EducationalExperiencePreview() {
+  const { edExpValues } = useContext(Context);
   let title =
     edExpValues.length >= 1 ? (
       <p className="titles">Educational Experience</p>
@@ -6,7 +10,6 @@ export function EducationalExperiencePreview({ edExpValues }) {
       <></>
     );
 
-  console.log(edExpValues);
   return (
     <div className="educational-experience-preview-container">
       {title}

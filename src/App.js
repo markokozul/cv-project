@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
 import "./App.css";
 import { MakeCV } from "./components/MakeCV";
 import { PreviewCV } from "./components/PreviewCV";
+
+export const Context = createContext(" ");
 
 function App() {
   const [generalInfoValues, setGeneralInfoValues] = useState({
     name: "",
     email: "",
     number: "",
-    adress: "",
+    address: "",
   });
   const [edExpValues, setEdExpValues] = useState([]);
 
@@ -16,18 +18,19 @@ function App() {
 
   return (
     <div className="content">
-      <MakeCV
-        onGeneralInfoValues={setGeneralInfoValues}
-        onEdExpValues={setEdExpValues}
-        edExpValues={edExpValues}
-        onPractExpValues={setPractExpValues}
-        practExpValues={practExpValues}
-      />
-      <PreviewCV
-        generalInfoValues={generalInfoValues}
-        edExpValues={edExpValues}
-        practExpValues={practExpValues}
-      />
+      <Context.Provider
+        value={{
+          edExpValues,
+          setEdExpValues,
+          practExpValues,
+          setPractExpValues,
+          generalInfoValues,
+          setGeneralInfoValues,
+        }}
+      >
+        <MakeCV />
+        <PreviewCV />
+      </Context.Provider>
     </div>
   );
 }

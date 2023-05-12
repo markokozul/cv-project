@@ -1,6 +1,10 @@
-export function GeneralInfo({ onGeneralInfoValues }) {
+import { useContext } from "react";
+import { Context } from "../../App";
+
+export function GeneralInfo() {
+  const { setGeneralInfoValues } = useContext(Context);
   const handleInput = (e) => {
-    onGeneralInfoValues((generalInfoValues) => {
+    setGeneralInfoValues((generalInfoValues) => {
       return { ...generalInfoValues, [e.target.name]: e.target.value };
     });
   };

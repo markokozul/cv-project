@@ -37,7 +37,7 @@
 }
 .educational-experience-preview-container {
   flex: 40;
-  font-size: 12px;
+  font-size: 10px;
   border-bottom: 3px solid rgb(124, 155, 165);
   color: gray;
 }
@@ -53,7 +53,7 @@
   flex-direction: row;
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(155, 155, 155);
 }
 
 .educational-experience-preview-container .item > div {
@@ -67,7 +67,7 @@
 }
 .practical-experience-preview-container {
   flex: 40;
-  font-size: 12px;
+  font-size: 110px;
   color: gray;
 }
 .practical-experience-preview-container .items {
@@ -82,7 +82,7 @@
   flex-direction: row;
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(155, 155, 155);
 }
 
 .practical-experience-preview-container .item > div {

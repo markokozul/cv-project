@@ -4,13 +4,13 @@ import { GeneralInfoPreview } from "./PreviewCV components/GeneralInfoPreview";
 import { PracticalExperiencePreview } from "./PreviewCV components/PracticalExperiencePreview";
 import "../styles/PreviewCV.css";
 
-export function PreviewCV({ generalInfoValues, edExpValues, practExpValues }) {
+export function PreviewCV() {
   return (
     <div className="main-previewcv-container">
       <div className="previewcv-content">
-        <GeneralInfoPreview generalInfoValues={generalInfoValues} />
-        <EducationalExperiencePreview edExpValues={edExpValues} />
-        <PracticalExperiencePreview practExpValues={practExpValues} />
+        <GeneralInfoPreview />
+        <EducationalExperiencePreview />
+        <PracticalExperiencePreview />
       </div>
     </div>
   );

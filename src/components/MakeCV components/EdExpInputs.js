@@ -1,7 +1,12 @@
-export function EdExpInputs({ index, onEdExpValues }) {
+import { useContext } from "react";
+import { Context } from "../../App";
+
+export function EdExpInputs({ index }) {
+  const { setEdExpValues } = useContext(Context);
+
   console.log(index);
   const handleInput = (e) => {
-    onEdExpValues((edExpValues) => {
+    setEdExpValues((edExpValues) => {
       return edExpValues.map((item) => {
         console.log(item.id, index);
         if (item.id === index) {
@@ -10,12 +15,11 @@ export function EdExpInputs({ index, onEdExpValues }) {
           return item;
         }
       });
-      // return [{ ...edExpValues, [e.target.name]: e.target.value }];
     });
   };
 
   const removeSection = () => {
-    onEdExpValues((edExpValues) =>
+    setEdExpValues((edExpValues) =>
       edExpValues.filter((item) => item.id !== index)
     );
   };
@@ -29,7 +33,7 @@ export function EdExpInputs({ index, onEdExpValues }) {
       <label>Date of study:</label>
       <input name="date" type="date" onInput={handleInput}></input>
       <button className="remove-btn" onClick={removeSection}>
-        Remove
+        Remove Section
       </button>
     </>
   );

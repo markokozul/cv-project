@@ -32,7 +32,7 @@
 }
 .general-info-preview-container .contact-info {
   width: 35%;
-  font-size: 12px;
+  font-size: 11px;
   color: gray;
 }
 .educational-experience-preview-container {
@@ -41,40 +41,13 @@
   border-bottom: 3px solid rgb(124, 155, 165);
   color: gray;
 }
-.educational-experience-preview-container .items {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-.educational-experience-preview-container .item {
-  height: 30px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
-  border-bottom: 1px solid rgb(155, 155, 155);
-}
-
-.educational-experience-preview-container .item > div {
-  text-align: center;
-  flex: 33.333333;
-  padding: 0;
-  margin: 0;
-}
-.educational-experience-preview-container .item > div > p {
-  margin: 0;
-}
-.practical-experience-preview-container {
-  flex: 40;
-  font-size: 110px;
-  color: gray;
-}
+.educational-experience-preview-container .items,
 .practical-experience-preview-container .items {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
+.educational-experience-preview-container .item,
 .practical-experience-preview-container .item {
   height: 30px;
   display: flex;
@@ -85,14 +58,21 @@
   border-bottom: 1px solid rgb(155, 155, 155);
 }
 
+.educational-experience-preview-container .item > div,
 .practical-experience-preview-container .item > div {
   text-align: center;
   flex: 33.333333;
   padding: 0;
   margin: 0;
 }
+.educational-experience-preview-container .item > div > p,
 .practical-experience-preview-container .item > div > p {
   margin: 0;
+}
+.practical-experience-preview-container {
+  flex: 40;
+  font-size: 10px;
+  color: gray;
 }
 
 .titles {

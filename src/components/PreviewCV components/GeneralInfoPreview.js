@@ -12,15 +12,15 @@ export function GeneralInfoPreview() {
       </div>
       <div className="contact-info">
         <p>
-          <i class="fa fa-envelope" aria-hidden="true"></i>{" "}
+          <i className="fa fa-envelope" aria-hidden="true"></i>{" "}
           {generalInfoValues.email}
         </p>
         <p>
-          <i class="fa fa-phone-square" aria-hidden="true"></i>{" "}
+          <i className="fa fa-phone-square" aria-hidden="true"></i>{" "}
           {generalInfoValues.number}
         </p>
         <p>
-          <i class="fa fa-location-arrow" aria-hidden="true"></i>{" "}
+          <i className="fa fa-location-arrow" aria-hidden="true"></i>{" "}
           {generalInfoValues.address}
         </p>
       </div>

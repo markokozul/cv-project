@@ -15,9 +15,9 @@ export function GeneralInfo() {
       <input name="name" type="text" onInput={handleInput}></input>
       <label>E-mail:</label>
       <input name="email" type="email" onInput={handleInput}></input>
-      <label>Phone number</label>
+      <label>Phone number:</label>
       <input name="number" type="tel" onInput={handleInput}></input>
-      <label>Address</label>
+      <label>Address:</label>
       <input name="address" type="text" onInput={handleInput}></input>
     </div>
   );
